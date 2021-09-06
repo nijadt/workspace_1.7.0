@@ -1,0 +1,22 @@
+19:29:05 **** Incremental Build of configuration Debug for project dht22_lcd ****
+make -j8 all 
+arm-none-eabi-gcc -o "dht22_lcd.elf" @"objects.list"   -mcpu=cortex-m3 -T"../STM32L152RE_FLASH.ld" --specs=nosys.specs -Wl,-Map="dht22_lcd.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/stm32l1xx_hal_msp.o: in function `HAL_I2C_MspInit':
+D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/stm32l1xx_hal_msp.c:90: multiple definition of `HAL_I2C_MspInit'; ./Core/Src/i2c.o:D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/i2c.c:60: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/stm32l1xx_hal_msp.o: in function `HAL_I2C_MspDeInit':
+D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/stm32l1xx_hal_msp.c:126: multiple definition of `HAL_I2C_MspDeInit'; ./Core/Src/i2c.o:D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/i2c.c:96: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/tim.o: in function `HAL_TIM_Base_MspInit':
+D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/tim.c:64: multiple definition of `HAL_TIM_Base_MspInit'; ./Core/Src/stm32l1xx_hal_msp.o:D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/stm32l1xx_hal_msp.c:157: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/tim.o: in function `HAL_TIM_Base_MspDeInit':
+D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/tim.c:84: multiple definition of `HAL_TIM_Base_MspDeInit'; ./Core/Src/stm32l1xx_hal_msp.o:D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/stm32l1xx_hal_msp.c:182: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/usart.o: in function `HAL_UART_MspInit':
+D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/usart.c:60: multiple definition of `HAL_UART_MspInit'; ./Core/Src/stm32l1xx_hal_msp.o:D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/stm32l1xx_hal_msp.c:207: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/usart.o: in function `HAL_UART_MspDeInit':
+D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/usart.c:93: multiple definition of `HAL_UART_MspDeInit'; ./Core/Src/stm32l1xx_hal_msp.o:D:/BE/TP_base/dht22_lcd/Debug/../Core/Src/stm32l1xx_hal_msp.c:243: first defined here
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [makefile:66: dht22_lcd.elf] Error 1
+make: *** [makefile:59: all] Error 2
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+19:29:07 Build Failed. 14 errors, 0 warnings. (took 1s.944ms)
+
